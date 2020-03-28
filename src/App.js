@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import config from './config';
+import Layout from './components/Layout';
+import Latest from './components/Latest';
+import Chart from './components/Chart';
+import { FirebaseDatabaseProvider } from "@react-firebase/database";
+import Firebase from 'firebase';
 
-function App() {
+
+const App = () => {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <FirebaseDatabaseProvider firebase={Firebase} {...config}>
+        <Layout>
+          <section className="hero is-fullheight is-dark">
+          <div className="hero-head">
+              <div className="container">
+              <div>
+                <h1 className="title is-1">Rain Speedtest</h1>
+                <Latest />
+            </div>
+              </div>
+            </div>
+            <div className="hero-body">
+              <div className="container">
+               <Chart />
+              </div>
+            </div>
+          </section>
+        </Layout>
+        </FirebaseDatabaseProvider>
+    </>
   );
 }
 
