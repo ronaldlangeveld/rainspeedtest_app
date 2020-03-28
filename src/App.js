@@ -26,7 +26,9 @@ const App = () => {
             </div>
             <div className="hero-body">
               <div className="container">
+               <div style={canvasContainer}>
                <Chart />
+               </div>
               </div>
             </div>
           </section>
@@ -34,6 +36,10 @@ const App = () => {
         </FirebaseDatabaseProvider>
     </>
   );
+}
+
+const canvasContainer = {
+  height: "60vh"
 }
 
 export default App;

@@ -16,16 +16,14 @@ const Chart = () => {
 
             <FirebaseDatabaseNode
                 path="/results"
+                limitToLast={24}
+                
             >
                 {({isLoading, value}) => {
                     if((value === null || typeof value === "undefined")){
                        return (
                         <>
-                         <ClipLoader
-                                size={50}
-                                color={"#123abc"}
-                                loading={true}
-                                />
+                        
                         </>
                        )
                     } else {
@@ -44,6 +42,11 @@ const Chart = () => {
                         });
                         console.log(lbls);
                         console.log(dwnld);
+
+                        const options = {
+                            maintainAspectRatio: false,
+                            
+                          }
 
                     const bardata = {
                         labels: lbls,
@@ -73,7 +76,11 @@ const Chart = () => {
                     
                     return (
                         <>
-                          <Line data={bardata} />
+                                                <p className="subtitle has-text-centered is-3">Performance last 24 hours</p>
+
+                          <Line 
+                          options={options}
+                          data={bardata} />
                         </>
                     )
                     }
