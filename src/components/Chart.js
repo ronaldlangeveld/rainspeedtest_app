@@ -76,8 +76,7 @@ const Chart = () => {
                     
                     return (
                         <>
-                                                <p className="subtitle has-text-centered is-3">Performance last 24 hours</p>
-
+                        <p style={{marginLeft: "36px"}} className="is-size-7 has-text-white">Performance Last 24 hours</p>
                           <Line 
                           options={options}
                           data={bardata} />
