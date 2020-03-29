@@ -76,6 +76,12 @@ const Latest = () => {
                                     <p className="title is-5 has-text-warning">77616130</p>
                                 </div>
                             </div>
+                            <div className="level-item has-text-centered">
+                                <div>
+                                    <p className="heading">Band</p>
+                                    <p className="title is-5 has-text-link">1800 Mhz</p>
+                                </div>
+                            </div>
                             
                         </nav>
                     </div>

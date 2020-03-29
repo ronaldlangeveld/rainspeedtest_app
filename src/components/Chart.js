@@ -13,7 +13,6 @@ const Chart = () => {
 
     return (
         <>
-
             <FirebaseDatabaseNode
                 path="/results"
                 limitToLast={48}
