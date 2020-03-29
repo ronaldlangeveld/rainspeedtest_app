@@ -19,7 +19,8 @@ const App = () => {
           <div className="hero-head">
               <div className="container">
               <div>
-                <h1 className="title is-1">Rain Speedtest</h1>
+                <br />
+                <h1 className="title is-2">🌧 Rain Speedtest</h1>
                 <Latest />
             </div>
               </div>

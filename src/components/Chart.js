@@ -16,7 +16,7 @@ const Chart = () => {
 
             <FirebaseDatabaseNode
                 path="/results"
-                limitToLast={24}
+                limitToLast={48}
                 
             >
                 {({isLoading, value}) => {
@@ -32,7 +32,7 @@ const Chart = () => {
                     console.log(values)
                     
                         let lbls = values.map((val, i) => {
-                          return moment(val.timestamp).format('LLL')
+                          return moment(val.timestamp).format('LT')
                         });
                         let dwnld = values.map((val, i) => {
                             return val.download
