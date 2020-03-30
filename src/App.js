@@ -34,8 +34,8 @@ const App = () => {
               <Chart />
             </div>
           </div>
-
-          <section className="hero is-dark">
+          <br />
+          <section style={{marginTop: "5em"}} className="hero is-dark">
             <div className="hero-body">
               <div className="container">
               <div className="notification is-black">

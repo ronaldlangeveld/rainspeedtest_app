@@ -10,12 +10,18 @@ const Chart = () => {
     const [labels, setLabels] = useState(null);
     const [downloads, setDownloads] = useState(null);
 
+    const [chartLimit, setChartLimit] = useState(50);
+
+    const handleChange = (e) => {
+      setChartLimit(parseInt(e.target.value));
+    }
+
 
     return (
         <>
             <FirebaseDatabaseNode
                 path="/results"
-                limitToLast={50}
+                limitToLast={chartLimit}
                 
             >
                 {({isLoading, value}) => {
@@ -75,10 +81,27 @@ const Chart = () => {
                     
                     return (
                         <>
-                        <p style={{marginLeft: "36px"}} className="is-size-7 has-text-white">Performance Last 24 hours</p>
+                        <div className="field has-text-centered">
+  <label className="label has-text-centered has-text-white">Performance past </label>
+  <div className="control has-text-centered">
+    <div className="select">
+      <select value={chartLimit} onChange={handleChange}>
+        <option value="14">6 hours</option>
+        <option value="26">12 hours</option>
+        <option value="50">24 hours</option>
+        <option value="100">48 hours</option>
+        <option value="146">72 hours</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+                          <br />
+
                           <Line 
                           options={options}
                           data={bardata} />
+                          <br />
                         </>
                     )
                     }
