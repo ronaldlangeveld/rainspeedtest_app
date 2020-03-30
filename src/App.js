@@ -7,10 +7,12 @@ import Chart from './components/Chart';
 import { FirebaseDatabaseProvider } from "@react-firebase/database";
 import Firebase from 'firebase';
 import Stats from './components/Stats';
-
+import 'firebase/analytics';
 
 const App = () => {
 
+  Firebase.initializeApp(config);
+  Firebase.analytics();
 
 
   return (
