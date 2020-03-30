@@ -15,7 +15,7 @@ const Chart = () => {
         <>
             <FirebaseDatabaseNode
                 path="/results"
-                limitToLast={48}
+                limitToLast={50}
                 
             >
                 {({isLoading, value}) => {
