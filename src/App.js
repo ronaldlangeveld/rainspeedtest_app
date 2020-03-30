@@ -42,7 +42,7 @@ const App = () => {
                     <div className="has-text-centered has-text-weight-bold">
                       <p>Hi, I'm <a href="https://twitter.com/ronaldlangeveld" target="_blank">Ronald</a>. I made this on the evening of 27 March 2020 to keep track of the performance of my home broadband connection.</p>
                       <p>Every 30 minutes a Speed Test is automatically performed on my home server and results are stored onto a cloud based database.</p>
-                      <p>For those interested, I'm on the Rain Fixed LTE package, via Afrihost. I pay R1349 (± $80 USD) per month for 440 GB Data. <br /> I'm no more than 350 metres away from the LTE Tower.</p>
+                      <p>For those interested, I'm on the Rain Fixed LTE package, via Afrihost. <br /> I'm no more than 350 metres away from the LTE Tower.</p>
                       {/* <p>I've had numerous issues in the past, which you can real all about <a href="https://mybroadband.co.za/forum/threads/slow-rain-lte-speeds-and-communication-from-rain-and-afrihost.1069406/" target="_blank">here</a>. Due to lack of competition in my area and no FTTH, I haven't been able to move to a different ISP.</p> */}
                     </div>
                  
