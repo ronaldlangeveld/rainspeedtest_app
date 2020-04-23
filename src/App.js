@@ -8,7 +8,7 @@ import { FirebaseDatabaseProvider } from "@react-firebase/database";
 import Firebase from 'firebase';
 import Stats from './components/Stats';
 import 'firebase/analytics';
-
+import Mailchimp from 'react-mailchimp-form'
 const App = () => {
 
   Firebase.initializeApp(config);
@@ -22,6 +22,23 @@ const App = () => {
           <section className="hero is-dark">
             <div className="hero-body">
               <div className="container">
+              <div class="notification is-black has-text-centered">
+                <p>Thank you for being part of the experiment. We cancelled Rain and therefore no longer collecting Speedtest data for this connection.</p>
+                <p>I am however building a user friendly version of this App that you can easily host on your computer to keep track of your internet performance to send to your ISP when it slows down.</p>
+                <p>Enter your email and I will let you know as soon as I release a version for you to test</p>
+                <Mailchimp
+        action='https://ronaldla.us13.list-manage.com/subscribe/post?u=d2abdd343415367503fbe4bc9&amp;id=4bfae69e60'
+        fields={[
+          {
+            name: 'EMAIL',
+            placeholder: 'Email',
+            type: 'email',
+            required: true,
+          }
+        ]}
+        />
+        
+                  </div>
               <h1 className="title is-1 has-text-centered">Rain Speedtest</h1>
                 <div>
                   <Latest />

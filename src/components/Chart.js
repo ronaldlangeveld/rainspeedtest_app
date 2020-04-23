@@ -21,7 +21,7 @@ const Chart = () => {
         <>
             <FirebaseDatabaseNode
                 path="/results"
-                limitToLast={chartLimit}
+                // limitToLast={chartLimit}
                 
             >
                 {({isLoading, value}) => {
@@ -37,7 +37,7 @@ const Chart = () => {
                     console.log(values)
                     
                         let lbls = values.map((val, i) => {
-                          return moment(val.timestamp).format('LT')
+                          return moment(val.timestamp).format('lll')
                         });
                         let dwnld = values.map((val, i) => {
                             return val.download
@@ -81,7 +81,7 @@ const Chart = () => {
                     
                     return (
                         <>
-                        <div className="field has-text-centered">
+                        {/* <div className="field has-text-centered">
   <label className="label has-text-centered has-text-white">Performance past </label>
   <div className="control has-text-centered">
     <div className="select">
@@ -94,7 +94,7 @@ const Chart = () => {
       </select>
     </div>
   </div>
-</div>
+</div> */}
 
                           <br />
 
